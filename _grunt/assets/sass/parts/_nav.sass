@@ -1,0 +1,30 @@
+// -----------------------------------------
+//   Navigation
+// -----------------------------------------
+.top-bar-background
+  background: white
+  padding: 20px 10px
+  position: fixed
+  width: 100%
+  z-index: 20
+
+nav.top-bar
+  margin-bottom: 0
+  background: none
+
+nav.top-bar li
+  font-family: $proxima
+  text-transform: uppercase
+
+nav.top-bar li a
+  color: #666666 !important
+  font-size: 14px !important
+
+.top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active, .top-bar ul > li:not(.name):focus
+  background: none !important
+
+.top-bar ul > li:not(.name):hover a, .top-bar ul > li:not(.name).active a, .top-bar ul > li:not(.name):focus a
+  color: black !important
+
+ul#nav li.current-menu-item a
+  color: #a31624 !important

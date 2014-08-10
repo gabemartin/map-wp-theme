@@ -1,0 +1,502 @@
+//
+// Theme Name: Map
+// Author: Brian Dixon
+
+//  -----------------------------------------
+//    Variables
+// -----------------------------------------
+
+$proxima: "proxima-nova-condensed", sans-serif
+
+//  -----------------------------------------
+//    Colors
+// -----------------------------------------
+
+.red
+  color: #bf1e2e
+
+.orange
+  color: #d68f28
+
+.green
+  color: #85c441
+
+.blue
+  color: #38c1cf
+
+.purple
+  color: #574a9e
+
+.black
+  color: #000000
+// -----------------------------------------
+//    Shared Styles
+// -----------------------------------------
+.row
+  width: 1200px
+
+.responsive
+  width: 100%
+  height: auto
+
+body
+  font-family: "adelle", serif
+
+h1, h2, h3, h4, h5, h6
+  font-family: $proxima
+  font-weight: 800
+
+p
+  font-size: 16px
+
+// -----------------------------------------
+//    Big Red Search Button
+// -----------------------------------------
+a.map-button, input[type="submit"]
+  color: white !important
+  font-size: 18px
+  padding: 14px
+  text-align: center
+  display: block
+  margin-top: 14px
+  border-radius: 28px
+  background: #a31624
+  width: 100%
+
+input[type="submit"]
+  border: none
+  padding: 14px 28px
+  cursor: pointer
+  font-family: $proxima !important
+  font-size: 21px
+  text-transform: uppercase
+
+input[type="text"]#search
+  font-size: 24px
+  padding: 36px 24px
+
+a.map-button strong
+  font-family: $proxima
+  font-size: 21px
+
+a.map-button:hover, input[type="submit"]:hover
+  background: black
+
+a
+  color: #bf1e2e
+  transition: all 0.2s ease-in-out
+
+// -----------------------------------------
+//   Navigation
+// -----------------------------------------
+.top-bar-background
+  background: white
+  padding: 20px 10px
+  position: fixed
+  width: 100%
+  z-index: 20
+
+nav.top-bar
+  margin-bottom: 0
+  background: none
+
+nav.top-bar li
+  font-family: $proxima
+  text-transform: uppercase
+
+nav.top-bar li a
+  color: #666666 !important
+  font-size: 14px !important
+
+.top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active, .top-bar ul > li:not(.name):focus
+  background: none !important
+
+.top-bar ul > li:not(.name):hover a, .top-bar ul > li:not(.name).active a, .top-bar ul > li:not(.name):focus a
+  color: black !important
+
+ul#nav li.current-menu-item a
+  color: #a31624 !important
+
+// -----------------------------------------
+//    Home
+// -----------------------------------------
+.logo-home
+  padding: 100px 0 150px 0
+
+p.about
+  font-size: 16px
+  line-height: 200%
+  padding: 15px 0
+  text-align: center
+
+#artwork
+  background: #bf1e2e
+
+// -----------------------------------------
+//    Pages
+// -----------------------------------------
+.content
+  padding: 85px 0 100px 0
+
+h3.title
+  font-size: 42px
+
+h4
+  font-weight: 400
+
+h4 span
+  font-size: 14px
+
+// -----------------------------------------
+//    Search
+// -----------------------------------------
+p.results
+  text-align: center
+  padding-bottom: 10px
+
+p.results span
+  font-family: $proxima
+  font-size: 18px
+
+// -----------------------------------------
+//    Artwork loop
+// -----------------------------------------
+p.photo-info
+  font-family: $proxima
+
+strong.heading
+  text-transform: uppercase
+  font-family: $proxima
+  font-size: 12px
+  color: #777777
+  display: block
+  margin-bottom: 3px
+
+.notes h4, .notes h5
+  margin-top: 0
+  font-family: $proxima
+
+.notes h5
+  font-size: 13px
+
+a.more, a.map
+  font-family: $proxima
+  display: block
+  padding-bottom: 5px
+
+.info
+  display: none
+  margin-top: 14px
+
+// -----------------------------------------
+//    About
+// -----------------------------------------
+body.page-id-28 .content
+  padding: 20px 0 30px 0
+
+div.logos
+  padding-bottom: 100px
+
+// -----------------------------------------
+//    Tags
+// -----------------------------------------
+#tags
+  margin: 40px 0
+
+#tags a
+  background: #888888
+  padding: 10px 20px
+  font-weight: bold
+  font-family: $proxima
+  color: white
+  border-radius: 5px
+  font-size: 18px
+  display: inline-block
+  margin: 5px
+
+#tags a:hover
+  background: #777777
+
+// -----------------------------------------
+//    Thumbnails
+// -----------------------------------------
+.thumbnails
+  padding: 85px 0 50px 0
+
+body.category .thumbnails
+  padding: 14px 14px 60px
+
+.thumbnails li h5
+  text-align: center
+  font-size: 14px
+  margin: 5px 0 25px 0
+  text-transform: uppercase
+
+.thumbnails a
+  color: #555555
+
+.thumbnails a:hover
+  color: #bf1e2e
+
+.block-grid li
+  padding: 0 !important
+
+// -----------------------------------------
+//    Breadcrumbs
+// -----------------------------------------
+.breadcrumbs
+  text-align: center
+  font-family: $proxima
+  background: #eaeaea
+  padding: 100px 0 15px 0
+
+.breadcrumbs a
+  color: #bf1e2e
+  font-weight: 400
+
+.breadcrumbs a:hover
+  color: #2ba6cb
+
+.breadcrumbs span
+  font-weight: 400
+  color: #555555
+
+// -----------------------------------------
+//    Slideshow
+// -----------------------------------------
+#featured img
+  display: none
+
+#featured.orbit
+  background: none
+
+#featured.orbit img
+  display: block
+
+// -----------------------------------------
+//    Google Maps
+// -----------------------------------------
+
+#map
+  position: relative
+  z-index: 10
+
+figure
+  height: 0
+  padding-bottom: 56.25%
+  // 16: 9
+  padding-bottom: 95%
+  position: relative
+  width: 100%
+  margin: 0
+
+iframe
+  height: 100%
+  left: 0
+  position: absolute
+  top: 0
+  width: 100%
+
+.code-box
+  margin: 14px
+  padding: 30px 0 0 0
+
+body.page-id-83 #list, body.page-id-83 .contact, body.page-id-83 #footer, body.error404 figure
+  display: none
+
+// -----------------------------------------
+//    Contact
+// -----------------------------------------
+.contact
+  background: #cccccc
+  text-align: center
+
+.contact h3
+  color: white
+
+#social
+  padding: 60px 0
+
+// -----------------------------------------
+//    Footer List
+// -----------------------------------------
+#list
+  padding: 100px 0
+
+#list ul li
+  list-style: none
+  font-family: $proxima
+
+#list ul li strong
+  color: white
+  padding: 0 5px
+
+#list ul li a.downtown
+  background: #bf1e2e
+
+#list ul li a.midtown
+  background: #0b783d
+
+#list ul li a.east
+  background: #40c3d7
+
+#list ul li a.south
+  background: #574a9e
+
+#list ul li a.downtown:hover, #list ul li a.midtown:hover, #list ul li a.east:hover
+  background: #444444
+
+#list ul li a
+  color: #999999
+
+#list ul li a:hover
+  color: #444444
+
+h5.neighborhood
+  color: white !important
+  font-size: 18px
+  padding: 14px
+  text-align: center
+  display: block
+  margin-bottom: 28px
+  border-radius: 28px
+  background: #cccccc
+
+// -----------------------------------------
+//    Footer
+// -----------------------------------------
+
+// -----------------------------------------
+//    Arrows
+// -----------------------------------------
+.grey-small-arrow-down
+  width: 0
+  height: 0
+  border-left: 25px solid transparent
+  border-right: 25px solid transparent
+  border-top: 20px solid #ededed
+  margin: (-1px) auto
+
+.white-arrow-down
+  width: 0
+  height: 0
+  border-left: 35px solid transparent
+  border-right: 35px solid transparent
+  border-top: 30px solid white
+  margin: (-2px) auto
+
+.red-arrow-down
+  width: 0
+  height: 0
+  border-left: 35px solid transparent
+  border-right: 35px solid transparent
+  border-top: 30px solid #bf1e2e
+  margin: (-1px) auto
+
+.grey-arrow-down
+  width: 0
+  height: 0
+  border-left: 35px solid transparent
+  border-right: 35px solid transparent
+  border-top: 30px solid #cccccc
+  margin: (-1px) auto
+
+.red-arrow-down-map
+  width: 0
+  height: 0
+  border-left: 35px solid transparent
+  border-right: 35px solid transparent
+  border-top: 30px solid #bf1e2e
+  position: absolute
+  top: 0
+  left: 50%
+  z-index: 20
+  margin: (-1px) 0 0 -35px
+
+.white-arrow-down-map
+  width: 0
+  height: 0
+  border-left: 35px solid transparent
+  border-right: 35px solid transparent
+  border-top: 30px solid white
+  position: absolute
+  top: 0
+  left: 50%
+  z-index: 20
+  margin: (-1px) 0 0 -35px
+
+// -----------------------------------------
+//    Icons
+// -----------------------------------------
+.fc-webicon
+  display: inline-block
+  background-size: 100%
+  width: 30px
+  height: 30px
+  text-indent: -999em
+  text-align: left
+  margin-bottom: 5px
+
+.fc-webicon:hover
+
+.fc-webicon.large
+  width: 48px
+  height: 48px
+
+// Facebook
+.fc-webicon.facebook.large
+  background: url("/wp-content/uploads/2014/07/facebook.png")
+
+// Mail
+.fc-webicon.mail.large
+  background: url("/wp-content/uploads/2014/07/email.png")
+
+// Instagram
+.fc-webicon.instagram.large
+  background: url("/wp-content/uploads/2014/07/instagram.png")
+
+// Twitter
+.fc-webicon.twitter.large
+  background: url("/wp-content/uploads/2014/07/twitter.png")
+
+// -----------------------------------------
+//    Scroll to top
+// -----------------------------------------
+.scrollup
+  width: 40px
+  height: 40px
+  opacity: 0.3
+  position: fixed
+  bottom: 20px
+  right: 100px
+  display: none
+  text-indent: -9999px
+  z-index: 2000
+  background: url("/wp-content/uploads/2013/03/icon_top.png") no-repeat
+
+// -----------------------------------------
+//    Magic Zoom
+// -----------------------------------------
+#thumbnails
+  margin-top: 24px
+
+.MagicZoomHint
+  font-size: 10pt !important
+  color: black !important
+  font-weight: bold !important
+
+.MagicZoomBigImageCont
+  border: none !important
+
+// -----------------------------------------
+//    Media queries
+// -----------------------------------------
+@media only screen and (max-width: 767px)
+  .logo
+    max-width: 250px
+  .logo-home
+    padding: 50px 0
+  .breadcrumbs
+    margin-bottom: 30px
+  .content
+    padding: 20px 0 0 0
