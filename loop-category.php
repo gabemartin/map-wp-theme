@@ -1,0 +1,1 @@
+					<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php if ( has_post_thumbnail() ) { the_post_thumbnail('thumbnail'); } ?></a><h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5></li>
