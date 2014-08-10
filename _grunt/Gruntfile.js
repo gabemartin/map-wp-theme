@@ -4,13 +4,11 @@ module.exports = function(grunt) {
     'concat',
     'sass',
     'autoprefixer',
-    'modernizr',
     'uglify',
     'haml',
     'cssmin',
     'imagemin',
     'htmlmin',
-    'modernizr',
     'string-replace'
   ]);
   grunt.registerTask('default', ['connect', 'watch']);
