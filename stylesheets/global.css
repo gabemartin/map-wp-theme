@@ -6745,6 +6745,10 @@ table.hide-for-medium {
   color: #574a9e;
 }
 
+.black {
+  color: black;
+}
+
 .row {
   width: 1200px;
 }

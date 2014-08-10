@@ -1,2 +1,6 @@
 
-_grunt
+_grunt/node_modules
+_grunt/.sass-cache
+_grunt/node_modules
+_grunt/bower_components
+_grunt/assets/sass/.bower.json
