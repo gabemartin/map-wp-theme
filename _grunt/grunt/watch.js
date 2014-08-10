@@ -7,9 +7,9 @@ module.exports = {
             livereload: true
         }
     },
-    haml: {
-        files: ['assets/*.haml', 'assets/**/*.haml'],
-        tasks: ['haml', 'htmlmin'],
+    php: {
+        files: ['../*.php'],
+        tasks: [''],
         options: {
             spawn: false,
             livereload: true,
