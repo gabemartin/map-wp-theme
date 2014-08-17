@@ -1,10 +1,17 @@
 $menu_line: 4px
 $menu_gap: 10px
 $menu_width: 40px
-$menu_offset_top: 40px
+$menu_offset_top: 35px
 $menu_offset_right: 40px
 $menu_toggle_offset: ($menu_line + $menu_gap)/2
-
+.top-bar-background
+    padding: 0
+    .name
+        ul, li
+            margin-bottom: 0
+        h1
+            padding-left: 13px
+            padding-top: 10px
 #top-bar #menu
     position: fixed
     display: block
@@ -49,6 +56,8 @@ a.menu-toggle
     width: $menu_width+($menu_offset_right*2)
     height: (($menu_line*3)+($menu_gap*2))+($menu_offset_top*2)
     transition-duration: 0
+    &:hover
+        background-color: #eee
     &:after, &:before, span
         @extend %lines
         width: $menu_width
@@ -62,11 +71,14 @@ a.menu-toggle
 .menu-on
     a.menu-toggle
         margin: $menu_toggle_offset 0 0 $menu_toggle_offset
+        &:hover
+            background-color: #000
         &:after
             transform: rotate(45deg)
             +positions(($menu_line+$menu_gap+$menu_offset_top),auto,auto,$menu_offset_right)
         &:before
             opacity: 0
+            transform: translateX(100%)
             transition: transform .3s ease-in 0, opacity .3s ease-out 0s
         span
             transform: rotate(-45deg)

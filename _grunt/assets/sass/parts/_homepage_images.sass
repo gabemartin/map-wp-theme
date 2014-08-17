@@ -1,6 +1,13 @@
+%hoverstate
+  transform: scale(1.05)
+  opacity: 1
+  transition: all .3s cubic-bezier(.58,.28,.36,1.49) 0
+
 .home .thumbnails, .single-artwork .thumbnails
+  padding-top: 100px
+  overflow: hidden
   ul
-    padding-top: 50px
+    padding-top: 0
   li
     perspective: 600
     position: relative
@@ -10,17 +17,15 @@
     a
       display: block
       position: relative
-      transform-origin: center center
+      transform-origin: top center
       transition-duration: .5s
       transition-delay: 0
       opacity: .8
       &:hover
-        transform: scale(1.05)
-        opacity: 1
-        transition: all .3s cubic-bezier(.58,.28,.36,1.49) 0
+        @extend %hoverstate
       img
         display: block
-
+        margin: 0
     %hoverbox
       opacity: 1
     &.t
@@ -65,8 +70,9 @@
     h5
       color: #fff
       margin: 0
-      padding: 0
-      line-height: 3em
+      padding: .5em
+      line-height: 1.2em
+
   a:hover figcaption
     opacity: 1
 
