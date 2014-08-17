@@ -1,0 +1,75 @@
+$menu_line: 4px
+$menu_gap: 10px
+$menu_width: 40px
+$menu_offset_top: 40px
+$menu_offset_right: 40px
+$menu_toggle_offset: ($menu_line + $menu_gap)/2
+
+#top-bar #menu
+    position: fixed
+    display: block
+    +positions(0,0,auto,auto)
+    ul
+        width: 0
+        height: 0
+        overflow: hidden
+        transition-duration: 0
+.menu-on
+    #top-bar #menu
+        +positions(0,0,0,0)
+        background-color: rgba(#000, .9)
+        z-index: 999999999
+        ul#nav
+            +striplist
+            width: 300px
+            height: auto
+            position: absolute
+            +positions(50%,auto,auto,50%)
+            margin-left: -150px
+            transform: translateY(-50%)
+            li
+                a
+                    font-size: 3em
+                    text-align: center
+                    display: block
+                    font-family: $proxima
+%lines
+    content: ''
+    background-color: red
+    display: block
+    position: absolute
+    +positions(0,auto,auto,0)
+    +hide-text
+    will-change: transform, opacity
+    transition: transform .3s ease-in 0, opacity 1s ease-out .2s
+a.menu-toggle
+    position: absolute
+    +positions(0,0,auto,auto)
+    display: inline-block
+    width: $menu_width+($menu_offset_right*2)
+    height: (($menu_line*3)+($menu_gap*2))+($menu_offset_top*2)
+    transition-duration: 0
+    &:after, &:before, span
+        @extend %lines
+        width: $menu_width
+        height: $menu_line
+    &:after
+        +positions($menu_offset_top,auto,auto,$menu_offset_right)
+    &:before
+        +positions(($menu_line+$menu_gap+$menu_offset_top),auto,auto,$menu_offset_right)
+    span
+        +positions((($menu_line*2)+($menu_gap*2))+$menu_offset_top,auto,auto,$menu_offset_right)
+.menu-on
+    a.menu-toggle
+        margin: $menu_toggle_offset 0 0 $menu_toggle_offset
+        &:after
+            transform: rotate(45deg)
+            +positions(($menu_line+$menu_gap+$menu_offset_top),auto,auto,$menu_offset_right)
+        &:before
+            opacity: 0
+            transition: transform .3s ease-in 0, opacity .3s ease-out 0s
+        span
+            transform: rotate(-45deg)
+            +positions(($menu_line+$menu_gap+$menu_offset_top),auto,auto,$menu_offset_right)
+    .orbit-wrapper
+        z-index: 1

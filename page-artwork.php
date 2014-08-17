@@ -22,11 +22,12 @@ if (have_posts()) :
 //  Now start The Loop:
     if(has_post_thumbnail()) : echo "
       <li>
-        <a href='$link' title='$title'>
+        <a href='$link'>
           <figure>
             <img src='$thumb' class='responsive' alt='$title'>
             <figcaption><h5>$title</h5></figcaption>
           </figure>
+          <i><i></i><i></i><i></i><i></i></i>
         </a>
       </li>
     "; endif;

@@ -1,0 +1,94 @@
+.home .thumbnails, .single-artwork .thumbnails
+  ul
+    padding-top: 50px
+  li
+    perspective: 600
+    position: relative
+    z-index: 1
+    &:hover
+      z-index: 2
+    a
+      display: block
+      position: relative
+      transform-origin: center center
+      transition-duration: .5s
+      transition-delay: 0
+      opacity: .8
+      &:hover
+        transform: scale(1.05)
+        opacity: 1
+        transition: all .3s cubic-bezier(.58,.28,.36,1.49) 0
+      img
+        display: block
+
+    %hoverbox
+      opacity: 1
+    &.t
+      a:active
+        animation: tilt-t 1.5s
+    &.r
+      a:active
+        animation: tilt-r 1.5s
+    &.b
+      a:active
+        animation: tilt-b 1.5s
+    &.l
+      a:active
+        animation: tilt-l 1.5s
+  i
+    display: block
+    position: absolute
+    +positions(0,0,0,0)
+    opacity: .3
+    z-index: 999999
+    transform: translateZ( 20 )
+    i
+      &:nth-child(1)
+        +positions(0,50%,50%,0)
+      &:nth-child(2)
+        +positions(0,0,50%,50%)
+      &:nth-child(3)
+        +positions(50%,50%,0,0)
+      &:nth-child(4)
+        +positions(50%,0,0,50%)
+
+
+
+
+
+  figcaption
+    position: absolute
+    background-color: rgba(#000, .5)
+    transition-duration: .3s
+    +positions(auto,0,0,0)
+    opacity: 0
+    h5
+      color: #fff
+      margin: 0
+      padding: 0
+      line-height: 3em
+  a:hover figcaption
+    opacity: 1
+
+
+@keyframes tilt-t
+  0%
+    transform: translateX( 0 ) rotateY( -2deg ) rotateX( 2deg ) scale(1.05)
+  100%
+    transform: translateX( 0 ) rotateY( -1deg ) rotateX( 1deg ) scale(1.05)
+@keyframes tilt-r
+  0%
+    transform: translateX( 0 ) rotateY( 2deg ) rotateX( 2deg ) scale(1.05)
+  100%
+    transform: translateX( 0 ) rotateY( 1deg ) rotateX( 1deg ) scale(1.05)
+@keyframes tilt-b
+  0%
+    transform: translateX( 0 ) rotateY( -2deg ) rotateX( -2deg ) scale(1.05)
+  100%
+    transform: translateX( 0 ) rotateY( -1deg ) rotateX( -1deg ) scale(1.05)
+@keyframes tilt-l
+  0%
+    transform: translateX( 0 ) rotateY( 2deg ) rotateX( -2deg ) scale(1.05)
+  100%
+    transform: translateX( 0 ) rotateY( 1deg ) rotateX( -1deg ) scale(1.05)
+

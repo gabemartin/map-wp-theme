@@ -10,4 +10,4 @@
 <?php get_template_part( 'loop'); ?>
 <?php get_template_part('maps'); ?>
 <?php get_template_part('list'); ?>
-<?php get_footer(); ?> 
+<?php get_footer(); ?>

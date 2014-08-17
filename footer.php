@@ -22,7 +22,7 @@
 <!-- Included JS Files (Compressed) -->
 <script src="<?php echo get_template_directory_uri(); ?>/javascripts/jquery.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/javascripts/foundation.min.js"></script>
-  
+
 <!-- Initialize JS Plugins -->
 <script src="<?php echo get_template_directory_uri(); ?>/javascripts/app.js"></script>
 <script>
@@ -96,5 +96,6 @@ $(document).ready(function(){
     });
 })
 </script>
+<script src="<?php echo get_template_directory_uri(); ?>/javascripts/main.js"></script>
 </body>
-</html> 
+</html>
