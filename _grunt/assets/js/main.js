@@ -11,6 +11,8 @@ $(function() {
       $('.b').removeClass('b').addClass('t');
       $('.l').removeClass('l').addClass('t');
     }, 0);
+  }).click(function(){
+    $(this).closest('li').addClass('clicked');
   });
   $('i i:nth-child(2)').hover(function(){
     $(this).closest('li').addClass('r');
@@ -19,6 +21,8 @@ $(function() {
       $('.b').removeClass('b').addClass('r');
       $('.l').removeClass('l').addClass('r');
     }, 0);
+  }).click(function(){
+    $(this).closest('li').addClass('clicked');
   });
   $('i i:nth-child(3)').hover(function(){
     $(this).closest('li').addClass('b');
@@ -27,6 +31,8 @@ $(function() {
       $('.r').removeClass('r').addClass('b');
       $('.l').removeClass('l').addClass('b');
     }, 0);
+  }).click(function(){
+    $(this).closest('li').addClass('clicked');
   });
   $('i i:nth-child(4)').hover(function(){
     $(this).closest('li').addClass('l');
@@ -35,5 +41,7 @@ $(function() {
       $('.r').removeClass('r').addClass('l');
       $('.b').removeClass('b').addClass('l');
     }, 0);
+  }).click(function(){
+    $(this).closest('li').addClass('clicked');
   });
 });

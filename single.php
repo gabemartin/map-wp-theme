@@ -23,6 +23,7 @@ if (have_posts()) : while (have_posts()) : the_post();
     <li$active_link_class>
       <a href='$active_link'>
         <img src='$thumb' class='responsive' alt='$title'>
+        <i><i></i><i></i><i></i><i></i></i>
       </a>
     </li>
   ";

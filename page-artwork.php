@@ -3,7 +3,7 @@ get_header();
 query_posts(array('post_type'=>'artwork', 'orderby'=>'rand' ));
 echo '
 <div class="thumbnails">
-  <ul class="block-grid six-up mobile-two-up">
+  <ul class="homepage-thumbnail-grid">
 ';
 if (have_posts()) :
   while (have_posts()) :
@@ -21,7 +21,7 @@ if (have_posts()) :
 
 //  Now start The Loop:
     if(has_post_thumbnail()) : echo "
-      <li>
+      <li style='background: transparent url($thumb) 0 0 repeat'>
         <a href='$link'>
           <figure>
             <img src='$thumb' class='responsive' alt='$title'>

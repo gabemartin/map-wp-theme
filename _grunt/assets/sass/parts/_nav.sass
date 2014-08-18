@@ -1,17 +1,22 @@
-$menu_line: 4px
-$menu_gap: 10px
+$menu_line: 5px
+$menu_gap: 8px
 $menu_width: 40px
 $menu_offset_top: 35px
 $menu_offset_right: 40px
 $menu_toggle_offset: ($menu_line + $menu_gap)/2
 .top-bar-background
     padding: 0
+    box-shadow: 0 2px 5px rgba(#000, .3)
+    height: ($menu_offset_top*2) + ($menu_line*3) + ($menu_gap*2)
     .name
         ul, li
             margin-bottom: 0
         h1
-            padding-left: 13px
-            padding-top: 10px
+            padding: 0
+            margin: 0
+            position: absolute
+            top: 25px
+            left: 20px
 #top-bar #menu
     position: fixed
     display: block
@@ -70,7 +75,6 @@ a.menu-toggle
         +positions((($menu_line*2)+($menu_gap*2))+$menu_offset_top,auto,auto,$menu_offset_right)
 .menu-on
     a.menu-toggle
-        margin: $menu_toggle_offset 0 0 $menu_toggle_offset
         &:hover
             background-color: #000
         &:after
@@ -83,5 +87,50 @@ a.menu-toggle
         span
             transform: rotate(-45deg)
             +positions(($menu_line+$menu_gap+$menu_offset_top),auto,auto,$menu_offset_right)
-    .orbit-wrapper
-        z-index: 1
+
++breakpoint(small)
+    $menu_line: 3px
+    $menu_gap: 5px
+    $menu_width: 20px
+    $menu_offset_top: 23px
+    $menu_offset_right: 20px
+    $menu_toggle_offset: ($menu_line + $menu_gap)/2
+    .top-bar-background
+        height: ($menu_offset_top*2) + ($menu_line*3) + ($menu_gap*2)
+        .name
+            ul, li
+                padding: 0
+            h1
+                padding: 0
+                margin: 0
+                position: absolute
+                top: 7px
+                left: 15px
+                .logo
+                    max-width: 250px
+
+    a.menu-toggle
+        width: $menu_width+($menu_offset_right*2)
+        height: (($menu_line*3)+($menu_gap*2))+($menu_offset_top*2)
+        &:after, &:before, span
+            width: $menu_width
+            height: $menu_line
+        &:after
+            +positions($menu_offset_top,auto,auto,$menu_offset_right)
+        &:before
+            +positions(($menu_line+$menu_gap+$menu_offset_top),auto,auto,$menu_offset_right)
+        span
+            +positions((($menu_line*2)+($menu_gap*2))+$menu_offset_top,auto,auto,$menu_offset_right)
+    .menu-on
+        a.menu-toggle
+            &:after
+                +positions(($menu_line+$menu_gap+$menu_offset_top),auto,auto,$menu_offset_right)
+            span
+                +positions(($menu_line+$menu_gap+$menu_offset_top),auto,auto,$menu_offset_right)
+
++breakpoint(tiny)
+    .top-bar-background
+        .name
+            h1
+                .logo
+                    max-width: 80%

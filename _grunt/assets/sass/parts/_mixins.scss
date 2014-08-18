@@ -6,6 +6,23 @@
 // brought in.
 //
 // - GABE
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (max-width: 1200px) { @content; }
+  }
+  @else if $point == medium {
+    @media (max-width: 1000px) { @content; }
+  }
+  @else if $point == small {
+    @media (max-width: 650px)  { @content; }
+  }
+  @else if $point == xsmall {
+    @media (max-width: 550px)  { @content; }
+  }
+  @else if $point == tiny {
+    @media (max-width: 330px)  { @content; }
+  }
+}
 /**
  * Creates a centered container using css calc property. Useful for using a full-width background with centered content. This does not work with old browers.
  *
