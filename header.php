@@ -25,6 +25,8 @@
 
   <script src="<?php echo get_template_directory_uri(); ?>/javascripts/modernizr.foundation.js"></script>
 
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.css' rel='stylesheet' />
   <!--[if IE 8]>
   <style type="text/css">
 	/* css for IE 8 */

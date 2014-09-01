@@ -1,12 +1,3 @@
-<?php get_header(); ?>
-
-
-
-<div id='map' style="position: fixed; top: 99px; left: 0; bottom: 0; right: 0; z-index: 1"></div>
-<script>
-L.mapbox.accessToken = 'pk.eyJ1IjoiZ2FiZW1hcnRpbiIsImEiOiJiV1IzWjBnIn0.7DJxAsMFhYEn2LJQ516sCQ';
-var geojson = [
-
 <?php
 query_posts(array('post_type'=>'artwork', 'orderby'=>'rand' ));
 $data = '
@@ -62,13 +53,8 @@ $trail = '},],';
 $cleantrail = '}],';
 $data = str_replace($trail, $cleantrail, $data);
 echo $data;
+// $data = preg_replace("/\s+/", " ", $data);
+// wp_reset_query();
+// header('Content-Type: application/json');
+// echo json_encode($data);
 ?>
-
-];
-
-L.mapbox.map('map', 'gabemartin.jck0373c')
-  .setView([35.1446, -90.0089], 13)
-  .featureLayer.setGeoJSON(geojson);
-</script>
-
-<?php get_footer(); ?>
